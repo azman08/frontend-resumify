@@ -13,7 +13,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../auth/firebase.js";
 import { signOut } from "firebase/auth";
 
-const Sidebar = () => {
+const SideNav = () => {
   const [isOpen, setIsOpen] = useState(true);
   const [user] = useAuthState(auth);
 
@@ -71,7 +71,7 @@ const Sidebar = () => {
   );
 };
 
-// Sidebar Item Component
+// SideNav Item Component
 const SidebarItem = ({ to, icon, text, isOpen }) => {
   return (
     <Link
@@ -84,4 +84,4 @@ const SidebarItem = ({ to, icon, text, isOpen }) => {
   );
 };
 
-export default Sidebar;
+export default SideNav;

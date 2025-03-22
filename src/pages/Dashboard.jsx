@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Sidebar from "../pages/Sidebar.jsx";
 import axios from "axios";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { jsPDF } from "jspdf";
 import { FaDownload } from "react-icons/fa";
+import SideNav from "./SideNav.jsx";
 
 const Dashboard = () => {
   const [resumes, setResumes] = useState([]);
@@ -59,8 +59,8 @@ const Dashboard = () => {
 
   return (
     <div className="flex">
-      <Sidebar />
-
+      {/* sidenav */}
+      <SideNav />
       <div className="flex-1 p-6 ml-64">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold mx-auto text-white">
