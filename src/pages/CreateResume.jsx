@@ -26,13 +26,13 @@ const CreateResume = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log("Submitting data:", formData); // Debugging
+      console.log("Submitting data:", formData);
 
       const response = await axios.post(
         "https://backend-resumify.onrender.com/api/resumes",
         {
           ...formData,
-          skills: formData.skills.split(",").map((skill) => skill.trim()), // Convert skills to array
+          skills: formData.skills.split(",").map((skill) => skill.trim()), 
         }
       );
 
